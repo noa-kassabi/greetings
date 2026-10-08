@@ -3,6 +3,7 @@ class Student:
         self.first_name = first_name
         self.last_name = last_name
         self.student_id = None
+        self.classroom = None
 
     def welcome(self):
         return f"Welcome to Albert School, {self.first_name}!"
@@ -12,6 +13,10 @@ class Student:
         registry.append(self)
         return self.student_id
 
+    def enroll(self, classroom):
+        self.classroom = classroom
+        return f"{self.first_name} {self.last_name} joins {classroom}."
+
 
 if __name__ == "__main__":
     registry = []
@@ -19,3 +24,4 @@ if __name__ == "__main__":
     student.register(registry)
     print(student.welcome())
     print(f"Registered as student #{student.student_id}")
+    print(student.enroll("MSc 1 Data"))
