@@ -1,6 +1,7 @@
 import pytest
 
-from greetings import Student, main
+from greetings import Student
+from greetings.cli import main
 
 
 def make_student() -> Student:
