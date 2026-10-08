@@ -7,7 +7,7 @@ class Student:
         self.classroom = None
 
     def welcome(self):
-        return f"Welcome to Albert School, {self.first_name}!"
+        return f"Welcome to Albert School, {self.first_name}!".upper()
 
     def register(self, registry):
         self.student_id = len(registry) + 1
